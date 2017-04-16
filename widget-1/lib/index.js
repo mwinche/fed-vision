@@ -1,1 +1,3 @@
-export * from './Toggle.js';
+import Toggle from './Toggle';
+
+export default Toggle;

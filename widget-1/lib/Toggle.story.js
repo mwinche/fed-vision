@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Toggle } from './Toggle.js';
+import Toggle from './Toggle.js';
 
 storiesOf('Toggle', module)
   .add('default', () => (

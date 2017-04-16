@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { css } from 'glamor';
+import PropTypes from 'prop-types';
 
 const toggle = {
   boxSizing: 'border-box',
@@ -9,6 +10,7 @@ const toggle = {
   height: 50,
   width: 125,
   cursor: 'pointer',
+  padding: 0,
 };
 
 const toggleDisabled = {
@@ -61,20 +63,20 @@ export default class Toggle extends Component {
   constructor(props) {
     super(props);
 
-    const { on, disabled } = props;
+    const { on } = props;
 
     this.state = {
-      on: on || false
+      on: on || false,
     };
   }
 
   toggle() {
     const { disabled, onChange } = this.props;
 
-    if(!disabled){
+    if (!disabled) {
       this.setState(
         ({ on }) => ({ on: !on }),
-        onChange
+        onChange,
       );
     }
   }
@@ -83,11 +85,9 @@ export default class Toggle extends Component {
     const { on } = this.state;
     const { disabled } = this.props;
 
-    return (<div
+    return (<button
       className={css(toggle, disabled && toggleDisabled)}
       onClick={() => this.toggle()}
-      role="checkbox"
-      aria-checked={on}
       data-test-id="toggle-wrapper"
     >
       <div
@@ -99,6 +99,18 @@ export default class Toggle extends Component {
         <span {...button} />
         <span {...right} />
       </div>
-    </div>);
+    </button>);
   }
 }
+
+Toggle.defaultProps = {
+  on: false,
+  disabled: false,
+  onChange: () => {},
+};
+
+Toggle.propTypes = {
+  disabled: PropTypes.bool,
+  on: PropTypes.bool,
+  onChange: PropTypes.func,
+};

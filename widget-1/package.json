@@ -14,7 +14,8 @@
   "dependencies": {
     "glamor": "^2.20",
     "react": "^15.5",
-    "react-dom": "^15.5"
+    "react-dom": "^15.5",
+    "prop-types": "^15.5"
   },
   "devDependencies": {
     "@kadira/storybook": "2.35.3",
@@ -29,7 +30,6 @@
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.3",
     "jest": "19.0.2",
-    "prop-types": "15.5.4",
     "react-test-renderer": "15.5.4"
   }
 }
