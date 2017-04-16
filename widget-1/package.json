@@ -1,0 +1,29 @@
+{
+  "name": "widget-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "start-storybook -p 8000 -c ./.storybook"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@kadira/storybook": "2.35.3",
+    "babel-cli": "6.24.1",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.10.3",
+    "glamor": "2.20.24",
+    "jest": "19.0.2",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
+  }
+}
