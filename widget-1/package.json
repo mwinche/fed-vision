@@ -16,6 +16,7 @@
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-2": "6.24.1",
+    "enzyme": "2.8.2",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
@@ -24,6 +25,7 @@
     "glamor": "2.20.24",
     "jest": "19.0.2",
     "react": "15.5.4",
-    "react-dom": "15.5.4"
+    "react-dom": "15.5.4",
+    "react-test-renderer": "15.5.4"
   }
 }

@@ -8,8 +8,8 @@ export class Toggle extends Component {
 
     return <div
         className={css(toggle, disabled && toggleDisabled)}
-        onClick={() => this.toggle()
-      }>
+        onClick={() => this.toggle()}
+        data-test-id="toggle-wrapper">
       <div className={css(wrapper,
           !on && off,
           disabled && wrapperDisabled)
@@ -32,11 +32,12 @@ export class Toggle extends Component {
   }
 
   toggle(){
-    const { disabled } = this.props;
+    const { disabled, onChange } = this.props;
 
     if(!disabled){
       this.setState(
-        ({ on }) => ({ on: !on })
+        ({ on }) => ({ on: !on }),
+        onChange
       );
     }
   }
