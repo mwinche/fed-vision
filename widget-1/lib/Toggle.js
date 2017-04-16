@@ -1,48 +1,6 @@
 import React, { Component } from 'react';
 import { css } from 'glamor';
 
-export class Toggle extends Component {
-  render(){
-    const { on } = this.state;
-    const { disabled } = this.props;
-
-    return <div
-        className={css(toggle, disabled && toggleDisabled)}
-        onClick={() => this.toggle()}
-        data-test-id="toggle-wrapper">
-      <div className={css(wrapper,
-          !on && off,
-          disabled && wrapperDisabled)
-        }>
-        <span {...left}></span>
-        <span {...button}></span>
-        <span {...right}></span>
-      </div>
-    </div>;
-  }
-
-  constructor(props){
-    super(props);
-
-    const { on, disabled } = props;
-
-    this.state = {
-      on: on || false
-    };
-  }
-
-  toggle(){
-    const { disabled, onChange } = this.props;
-
-    if(!disabled){
-      this.setState(
-        ({ on }) => ({ on: !on }),
-        onChange
-      );
-    }
-  }
-}
-
 const toggle = {
   boxSizing: 'border-box',
   overflow: 'hidden',
@@ -98,3 +56,49 @@ const button = css({
   height: 50,
   display: 'inline-block',
 });
+
+export default class Toggle extends Component {
+  constructor(props) {
+    super(props);
+
+    const { on, disabled } = props;
+
+    this.state = {
+      on: on || false
+    };
+  }
+
+  toggle() {
+    const { disabled, onChange } = this.props;
+
+    if(!disabled){
+      this.setState(
+        ({ on }) => ({ on: !on }),
+        onChange
+      );
+    }
+  }
+
+  render() {
+    const { on } = this.state;
+    const { disabled } = this.props;
+
+    return (<div
+      className={css(toggle, disabled && toggleDisabled)}
+      onClick={() => this.toggle()}
+      role="checkbox"
+      aria-checked={on}
+      data-test-id="toggle-wrapper"
+    >
+      <div
+        className={css(wrapper,
+        !on && off,
+        disabled && wrapperDisabled)}
+      >
+        <span {...left} />
+        <span {...button} />
+        <span {...right} />
+      </div>
+    </div>);
+  }
+}

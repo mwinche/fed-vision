@@ -2563,7 +2563,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-glamor@2.20.24:
+glamor@^2.20:
   version "2.20.24"
   resolved "https://registry.yarnpkg.com/glamor/-/glamor-2.20.24.tgz#a299af2eec687322634ba38e4a0854d8743d2041"
   dependencies:
@@ -2737,13 +2737,9 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
-iconv-lite@0.4.13:
+iconv-lite@0.4.13, iconv-lite@~0.4.13:
   version "0.4.13"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
-
-iconv-lite@~0.4.13:
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
 
 icss-replace-symbols@^1.0.2:
   version "1.0.2"
@@ -4399,6 +4395,12 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@15.5.4:
+  version "15.5.4"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.4.tgz#2ed3692716a5060f8cc020946d8238e7419d92c0"
+  dependencies:
+    fbjs "^0.8.9"
+
 prop-types@^15.5.4, prop-types@^15.5.7, prop-types@~15.5.7:
   version "15.5.8"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
@@ -4479,7 +4481,7 @@ react-docgen@^2.12.1:
     node-dir "^0.1.10"
     recast "^0.11.5"
 
-react-dom@15.5.4:
+react-dom@^15.5:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.5.4.tgz#ba0c28786fd52ed7e4f2135fe0288d462aef93da"
   dependencies:
@@ -4553,7 +4555,7 @@ react-test-renderer@15.5.4:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react@15.5.4:
+react@^15.5:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react/-/react-15.5.4.tgz#fa83eb01506ab237cdc1c8c3b1cea8de012bf047"
   dependencies:
