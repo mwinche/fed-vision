@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { css } from 'glamor';
+import { css, merge } from 'glamor';
 import PropTypes from 'prop-types';
+
+const mergeBG = (styles, backgroundColor) =>
+  backgroundColor ?
+    merge(styles, { backgroundColor }) :
+    styles;
 
 const toggle = {
   boxSizing: 'border-box',
@@ -83,7 +88,12 @@ export default class Toggle extends Component {
 
   render() {
     const { on } = this.state;
-    const { disabled } = this.props;
+    const {
+      disabled,
+      activeColor,
+      inactiveColor,
+      handleColor,
+    } = this.props;
 
     return (<button
       className={css(toggle, disabled && toggleDisabled)}
@@ -95,9 +105,9 @@ export default class Toggle extends Component {
         !on && off,
         disabled && wrapperDisabled)}
       >
-        <span {...left} />
-        <span {...button} />
-        <span {...right} />
+        <span {...mergeBG(left, activeColor)} />
+        <span {...mergeBG(button, handleColor)} />
+        <span {...mergeBG(right, inactiveColor)} />
       </div>
     </button>);
   }

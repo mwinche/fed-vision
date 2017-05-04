@@ -14,4 +14,13 @@ storiesOf('Toggle', module)
   ))
   .add('disabled (on)', () => (
     <Toggle disabled on />
+  ))
+  .add('override active color', () => (
+    <Toggle on activeColor="green" />
+  ))
+  .add('override inactive color', () => (
+    <Toggle inactiveColor="red" />
+  ))
+  .add('override handle color', () => (
+    <Toggle handleColor="gray" />
   ));
