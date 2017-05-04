@@ -6,3 +6,4 @@ export default Toggle;
 //TODO husky prepush/precommit test+lint
 //TODO testing in react storybook
 //TODO changelog generation
+//TODO customize eslint (airbnb is too restrictive)
