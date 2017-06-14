@@ -27,6 +27,15 @@ popd
 
 pushd .
 
+cd state-channel
+rm -rf node_modules
+yarn
+yalc publish
+
+popd
+
+pushd .
+
 cd app-1
 rm -rf node_modules
 yalc add widget-1 widget-2 widget-3
