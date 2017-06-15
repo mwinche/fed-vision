@@ -1,6 +1,5 @@
 import { createStore } from 'redux';
 
-import { ADD_CHANNEL, SEND_MESSAGE } from './actions.js';
 import reducers from './reducers.js';
 
 const channels = (state = {}, action) => {
