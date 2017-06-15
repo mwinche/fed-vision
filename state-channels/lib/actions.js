@@ -6,5 +6,5 @@ const addChannel = channel => ({ type: ADD_CHANNEL, channel });
 
 export {
   ADD_CHANNEL, SEND_MESSAGE,
-  addChannel, sendMessage
+  addChannel, sendMessage,
 };
