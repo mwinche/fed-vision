@@ -1,6 +1,6 @@
-import Toggle from './Toggle';
+import TypeablePickList from './TypeablePickList';
 
-export default Toggle;
+export default TypeablePickList;
 
 //TODO prettier for uniform code styles
 //TODO husky prepush/precommit test+lint

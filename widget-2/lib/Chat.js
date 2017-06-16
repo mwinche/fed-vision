@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { css } from 'glamor';
 
 const ENTER = 'Enter';
@@ -36,48 +36,36 @@ const inputStyles = {
   fontSize: 14,
 };
 
-export default class Toggle extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      chats: [],
-    };
+const handleKey = (key, input, handler) => {
+  if (key === ENTER) {
+    handler && handler(input.value);
+    input.value = '';
   }
+};
 
-  handleKey(key) {
-    if (key === ENTER) {
-      this.setState(
-        ({ chats }) => ({ chats: [this.input.value].concat(chats) }),
-        () => { this.input.value = ''; },
-      );
-    }
-  }
+export default ({ chats = [], onNewMessage }) => {
+  let input;
 
-  render() {
-    const { chats } = this.state;
-
-    return (<div className={css(container)}>
-      <div className={css(inputWrapper)}>
-        <input
-          type="text"
-          className={css(inputStyles)}
-          ref={(input) => { this.input = input; }}
-          data-test-id="input"
-          onKeyDown={({ key }) => this.handleKey(key)}
-        />
-      </div>
-      <ul className={css(chatList)}>
-        {
-            chats.map(msg => <li
-              data-test-id="chat"
-              key={msg}
-              className={css(chat)}
-            >
-              {msg}
-            </li>)
-          }
-      </ul>
-    </div>);
-  }
-}
+  return (<div className={css(container)}>
+    <div className={css(inputWrapper)}>
+      <input
+        type="text"
+        className={css(inputStyles)}
+        ref={(_input) => { input = _input; }}
+        data-test-id="input"
+        onKeyDown={({ key }) => handleKey(key, input, onNewMessage)}
+      />
+    </div>
+    <ul className={css(chatList)}>
+      {
+          chats.map(msg => <li
+            data-test-id="chat"
+            key={msg}
+            className={css(chat)}
+          >
+            {msg}
+          </li>)
+        }
+    </ul>
+  </div>);
+};

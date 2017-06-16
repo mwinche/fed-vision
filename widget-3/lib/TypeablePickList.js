@@ -18,6 +18,7 @@ const itemList = {
   width: 200,
   boxSizing: 'border-box',
   margin: 0,
+  backgroundColor: 'white',
 };
 
 const openList = {
