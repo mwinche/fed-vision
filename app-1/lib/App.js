@@ -58,7 +58,7 @@ export default class extends Component {
             this.setState({ rightChannel });
           }}
           onSelectChannel={ rightChannel => this.setState({ rightChannel }) }
-          onNewMessage={ message => this.onNewMessage(leftChannel, message) }
+          onNewMessage={ message => this.onNewMessage(rightChannel, message) }
           color="lightblue" />
     </div>;
   }
