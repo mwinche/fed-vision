@@ -47,15 +47,6 @@ export default ({ chats = [], onNewMessage }) => {
   let input;
 
   return (<div className={css(container)}>
-    <div className={css(inputWrapper)}>
-      <input
-        type="text"
-        className={css(inputStyles)}
-        ref={(_input) => { input = _input; }}
-        data-test-id="input"
-        onKeyDown={({ key }) => handleKey(key, input, onNewMessage)}
-      />
-    </div>
     <ul className={css(chatList)}>
       {
           chats.map(msg => <li
@@ -67,5 +58,14 @@ export default ({ chats = [], onNewMessage }) => {
           </li>)
         }
     </ul>
+    <div className={css(inputWrapper)}>
+      <input
+        type="text"
+        className={css(inputStyles)}
+        ref={(_input) => { input = _input; }}
+        data-test-id="input"
+        onKeyDown={({ key }) => handleKey(key, input, onNewMessage)}
+      />
+    </div>
   </div>);
 };
