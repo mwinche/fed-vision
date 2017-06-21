@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import { css } from 'glamor';
 
-import PickList from 'widget-3';
-import Chat from 'widget-2';
 import ChannelStore, { addChannel, sendMessage } from 'state-channels';
+
+import Channel from './Channel.js';
+
+const container = {
+  display: 'flex',
+  position: 'absolute',
+  top: 0, bottom: 0, left: 0, right: 0,
+};
 
 export default class extends Component {
   constructor(props){
@@ -19,26 +26,40 @@ export default class extends Component {
     const channels = ChannelStore.getState();
 
     this.state = {
-      channels: channels,
-      activeChannel: Object.keys(channels)[0]
+      channels,
+      leftChannel: Object.keys(channels)[0],
+      rightChannel: Object.keys(channels)[0]
     };
   }
 
-  render(){
-    const { channels, activeChannel } = this.state;
+  onNewMessage(channel, message){
+    ChannelStore.dispatch(sendMessage(channel, message));
+  }
 
-    return <div>
-      <Chat
-        chats={channels[activeChannel]}
-        onNewMessage={message => ChannelStore.dispatch(sendMessage(activeChannel, message))} />
-      <PickList
-        items={Object.keys(channels)}
-        selected={activeChannel}
-        onNewItem={channel => {
-          ChannelStore.dispatch(addChannel(channel));
-          this.setState({ activeChannel: channel });
-        }}
-        onSelect={activeChannel => this.setState({ activeChannel })} />
+  render(){
+    const { channels, leftChannel, rightChannel } = this.state;
+
+    return <div className={css(container)}>
+        <Channel
+          channel={leftChannel}
+          channels={channels}
+          onNewChannel={leftChannel => {
+            ChannelStore.dispatch(addChannel(leftChannel));
+            this.setState({ leftChannel });
+          }}
+          onSelectChannel={ leftChannel => this.setState({ leftChannel }) }
+          onNewMessage={ message => this.onNewMessage(leftChannel, message) }
+          color="lightgreen" />
+        <Channel
+          channel={rightChannel}
+          channels={channels}
+          onNewChannel={rightChannel => {
+            ChannelStore.dispatch(addChannel(rightChannel));
+            this.setState({ rightChannel });
+          }}
+          onSelectChannel={ rightChannel => this.setState({ rightChannel }) }
+          onNewMessage={ message => this.onNewMessage(leftChannel, message) }
+          color="lightblue" />
     </div>;
   }
 };
