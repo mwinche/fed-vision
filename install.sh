@@ -1,3 +1,5 @@
+which yalc 2> /dev/null || npm i -g yalc
+
 pushd .
 
 cd widget-1
