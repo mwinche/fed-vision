@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { css } from 'glamor';
 
-import ChannelStore, { addChannel, sendMessage } from 'state-channels';
+import { addChannel, sendMessage } from 'state-channels';
 
 import Channel from './Channel.js';
-
-ChannelStore.dispatch(addChannel('fed'));
-ChannelStore.dispatch(addChannel('bed'));
-ChannelStore.dispatch(addChannel('qa'));
 
 const container = {
   display: 'flex',
@@ -20,7 +16,9 @@ class App extends Component {
   constructor(props){
     super(props);
 
-    const channels = ChannelStore.getState();
+    const { store } = props;
+
+    const channels = store.getState();
 
     this.state = {
       leftChannel: Object.keys(channels)[0],
@@ -30,7 +28,7 @@ class App extends Component {
 
   render(){
     const {
-      onNewChannel, onNewMessage, channels
+      onNewChannel, onNewMessage, channels, store
     } = this.props;
 
     const { leftChannel, rightChannel } = this.state;
@@ -40,7 +38,7 @@ class App extends Component {
           channel={leftChannel}
           channels={channels}
           onNewChannel={leftChannel => {
-            ChannelStore.dispatch(addChannel(leftChannel));
+            onNewChannel(leftChannel);
             this.setState({ leftChannel });
           }}
           onSelectChannel={ leftChannel => this.setState({ leftChannel }) }
@@ -50,7 +48,7 @@ class App extends Component {
           channel={rightChannel}
           channels={channels}
           onNewChannel={rightChannel => {
-            ChannelStore.dispatch(addChannel(rightChannel));
+            onNewChannel(rightChannel);
             this.setState({ rightChannel });
           }}
           onSelectChannel={ rightChannel => this.setState({ rightChannel }) }
