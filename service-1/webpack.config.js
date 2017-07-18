@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   entry: './bundle.js',
@@ -15,11 +14,5 @@ module.exports = {
         loader: 'babel-loader',
       }
     ]
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'commons',
-      filename: 'commons.js'
-    })
-  ]
+  }
 };
