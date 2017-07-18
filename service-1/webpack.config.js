@@ -1,4 +1,5 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './bundle.js',
@@ -14,5 +15,10 @@ module.exports = {
         loader: 'babel-loader',
       }
     ]
-  }
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+        title: 'Code Splitting'
+    })
+  ]
 };

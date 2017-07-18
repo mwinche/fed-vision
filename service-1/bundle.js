@@ -3,12 +3,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ChannelStore from 'state-channels';
 
-ReactDOM.render(<App store={ChannelStore} />, document.getElementById('root'));
+const root = document.createElement('div');
+const delay = document.createElement('div');
+
+delay.style.position = 'fixed';
+delay.style.top = '5px';
+delay.style.left = '5px';
+
+document.body.appendChild(root);
+document.body.appendChild(delay);
+
+ReactDOM.render(<App store={ChannelStore} />, root);
 
 setTimeout(
   () => import(
       /* webpackChunkName: "Toggle" */
-      'widget-1'
+      'toggle'
     )
-    .then(Toggle => ReactDOM.render(<Toggle />, document.getElementById('delay'))),
+    .then(Toggle => {
+      ReactDOM.render(<Toggle.default />, delay);
+    }),
 5000);

@@ -1,7 +1,7 @@
 pushd .
 
-echo widget-1
-cd widget-1
+echo toggle
+cd toggle
 rm -rf node_modules
 yarn
 yarn build
@@ -47,7 +47,7 @@ pushd .
 echo app-1
 cd app-1
 rm -rf node_modules
-yarn link widget-1 widget-2 widget-3 state-channels
+yarn link toggle widget-2 widget-3 state-channels
 yarn
 yarn build
 yarn link
@@ -59,7 +59,7 @@ pushd .
 echo service-1
 cd service-1
 rm -rf node_modules
-yarn link app-1 widget-1
+yarn link app-1 toggle state-channels
 yarn
 yarn link
 
