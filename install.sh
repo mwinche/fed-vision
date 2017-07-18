@@ -59,7 +59,7 @@ pushd .
 echo service-1
 cd service-1
 rm -rf node_modules
-yarn link app-1
+yarn link app-1 widget-1
 yarn
 yarn link
 
