@@ -4,6 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "author": "",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "start": "start-storybook -p 8000 -c ./.storybook",
@@ -11,8 +13,6 @@
     "build": "rollup --config",
     "clean": "rm -rf ./es && rm -rf ./coverage"
   },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "glamor": "^2.20.25",
     "prop-types": "^15.5.10",

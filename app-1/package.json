@@ -13,33 +13,29 @@
     "build": "rollup --config",
     "clean": "rm -rf ./es && rm -rf ./coverage"
   },
+  "dependencies": {
+    "glamor": "^2.20.25",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0"
+  },
   "devDependencies": {
     "@storybook/react": "^3.1.3",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^2.8.2",
-    "eslint": "3.x",
+    "eslint": "^4.0.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
-    "react-test-renderer": "^15.6.1",
+    "react-test-renderer": "^15.5.4",
     "rollup": "^0.43.0",
     "rollup-plugin-babel": "^2.7.1"
-  },
-  "dependencies": {
-    "glamor": "^2.20.25",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
-    "state-channels": "file:.yalc/state-channels",
-    "widget-1": "file:.yalc/widget-1",
-    "widget-2": "file:.yalc/widget-2",
-    "widget-3": "file:.yalc/widget-3"
   }
 }
