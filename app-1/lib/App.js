@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { css } from 'glamor';
 
-import { addChannel, sendMessage } from 'state-channels';
+import { addChannel, sendMessage } from '@mwinche/state-channels';
 
 import Channel from './Channel.js';
 

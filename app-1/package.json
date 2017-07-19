@@ -1,6 +1,6 @@
 {
   "name": "@mwinche/app-1",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sample app",
   "main": "lib/index.js",
   "author": "Matt Winchester",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@mwinche/chat": "^1.0.0",
+    "@mwinche/state-channels": "^1.0.0",
     "@mwinche/typeable-pick-list": "^1.0.0",
     "glamor": "^2.20.25",
     "prop-types": "^15.5.10",
