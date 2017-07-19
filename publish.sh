@@ -52,6 +52,7 @@ echo app-1
 cd app-1
 rm -rf node_modules
 yarn
+yarn upgrade
 yarn build
 npm version minor
 npm publish
@@ -64,6 +65,7 @@ echo service-1
 cd service-1
 rm -rf node_modules
 yarn
+yarn upgrade
 rm -rf dist
 yarn build
 

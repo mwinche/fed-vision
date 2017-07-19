@@ -1,9 +1,12 @@
 {
   "name": "@mwinche/state-channels",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "State regarding channels",
   "main": "es/index.js",
   "module": "es/index.js",
+  "files": [
+    "es"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint ./lib",
