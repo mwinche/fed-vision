@@ -1,5 +1,5 @@
 {
-  "name": "toggle",
+  "name": "@mwinche/toggle",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",

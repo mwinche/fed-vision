@@ -1,5 +1,5 @@
 {
-  "name": "state-channels",
+  "name": "@mwinche/state-channels",
   "version": "1.0.0",
   "description": "State regarding channels",
   "main": "lib/index.js",

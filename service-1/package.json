@@ -1,5 +1,5 @@
 {
-  "name": "service-1",
+  "name": "@mwinche/service-1",
   "dependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
