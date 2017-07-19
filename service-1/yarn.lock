@@ -3,8 +3,8 @@
 
 
 "@mwinche/app-1@^1.2.1":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/app-1/-/app-1-1.3.0.tgz#48ddfb7c00ede0019b657d9b2bd259f41fec7117"
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/app-1/-/app-1-1.4.0.tgz#dee0e44ef2750b6a8a9ab4fa9eb34b43285aebcc"
   dependencies:
     "@mwinche/chat" "^1.1.0"
     "@mwinche/state-channels" "^1.1.0"
@@ -16,8 +16,8 @@
     react-redux "^5.0.5"
 
 "@mwinche/chat@^1.1.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/chat/-/chat-1.2.0.tgz#882113da3a5b1116a32cbd6e2d8a228d23feab20"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/chat/-/chat-1.3.0.tgz#24bc0ba9c0399e54e9765f98114ac3227c33a8fd"
   dependencies:
     glamor "^2.20"
     prop-types "^15.5"
@@ -25,14 +25,14 @@
     react-dom "^15.5"
 
 "@mwinche/state-channels@^1.1.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/state-channels/-/state-channels-1.2.0.tgz#946a643e49616922f8c087d914e753c092d12351"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/state-channels/-/state-channels-1.3.0.tgz#aca91f1f8358ad6b26a38160e78637c6eda300b5"
   dependencies:
     redux "^3.6.0"
 
 "@mwinche/toggle@^1.2.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/toggle/-/toggle-1.3.0.tgz#8b4caf310b6435e142b7dceac4888d085208c878"
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/toggle/-/toggle-1.4.0.tgz#ca4e0fe16d261a702909ae0d955085a63c07e7b3"
   dependencies:
     glamor "^2.20"
     prop-types "^15.5"
@@ -40,8 +40,8 @@
     react-dom "^15.5"
 
 "@mwinche/typeable-pick-list@^1.1.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/typeable-pick-list/-/typeable-pick-list-1.2.0.tgz#aefde27c7bc3256b15a7c40cef61560e7f58f9ec"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/typeable-pick-list/-/typeable-pick-list-1.3.0.tgz#af4bb5d20765ea6f9b852c995ffa50b64e1e58c5"
   dependencies:
     glamor "^2.20.25"
     prop-types "^15.5.10"
