@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from 'glamor';
 
-import PickList from 'typeable-pick-list';
-import Chat from 'chat';
+import PickList from '@mwinche/typeable-pick-list';
+import Chat from '@mwinche/chat';
 
 const half = {
   flexGrow: 1,

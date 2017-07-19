@@ -2,6 +2,24 @@
 # yarn lockfile v1
 
 
+"@mwinche/chat@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/chat/-/chat-1.0.0.tgz#e3661688676a1d30e489d185c44bd7c31c7a466c"
+  dependencies:
+    glamor "^2.20"
+    prop-types "^15.5"
+    react "^15.5"
+    react-dom "^15.5"
+
+"@mwinche/typeable-pick-list@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/typeable-pick-list/-/typeable-pick-list-1.0.0.tgz#d525086b977497f9ce079c5e899ce637682b6d81"
+  dependencies:
+    glamor "^2.20.25"
+    prop-types "^15.5.10"
+    react "^15.6.0"
+    react-dom "^15.6.0"
+
 "@storybook/addon-actions@^3.1.2":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.1.2.tgz#0f28ae69277964d098fcd5e3f4a74b09a233a48c"
@@ -2667,7 +2685,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-glamor@^2.20.25:
+glamor@^2.20, glamor@^2.20.25:
   version "2.20.25"
   resolved "https://registry.yarnpkg.com/glamor/-/glamor-2.20.25.tgz#71b84b82b67a9327771ac59de53ee915d148a4a3"
   dependencies:
@@ -4643,7 +4661,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@~15.5.7:
+prop-types@^15.5, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -4740,7 +4758,7 @@ react-docgen@^2.15.0:
     node-dir "^0.1.10"
     recast "^0.11.5"
 
-react-dom@^15.6.0:
+react-dom@^15.5, react-dom@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.0.tgz#8bc23cb0c80e706355b76ca9f8ce47cf7bdfb6d1"
   dependencies:
@@ -4832,7 +4850,7 @@ react-test-renderer@^15.5.4:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react@^15.6.0:
+react@^15.5, react@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.0.tgz#c23299b48e30ed302508ce89e1a02c919f826bce"
   dependencies:
