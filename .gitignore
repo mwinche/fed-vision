@@ -3,5 +3,5 @@
 */es/
 */yarn-error.log
 */dist/
-service-1/stats.json
-.npmrc
+*/stats.json
+*/.npmrc
