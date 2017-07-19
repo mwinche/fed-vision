@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@mwinche/chat@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/chat/-/chat-1.0.0.tgz#e3661688676a1d30e489d185c44bd7c31c7a466c"
+"@mwinche/chat@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/chat/-/chat-1.1.0.tgz#a2fe42e83a5fd0a12a637c1cb6848f28334d9ff5"
   dependencies:
     glamor "^2.20"
     prop-types "^15.5"
     react "^15.5"
     react-dom "^15.5"
 
-"@mwinche/state-channels@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/state-channels/-/state-channels-1.0.0.tgz#7eb0e7e13a882b49a0b108b76dea98724c88a3a6"
+"@mwinche/state-channels@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/state-channels/-/state-channels-1.1.0.tgz#704654f83f6ea6f99dd6cef7c2d8e381764ab5cf"
   dependencies:
     redux "^3.6.0"
 
-"@mwinche/typeable-pick-list@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mwinche/typeable-pick-list/-/typeable-pick-list-1.0.0.tgz#d525086b977497f9ce079c5e899ce637682b6d81"
+"@mwinche/typeable-pick-list@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@mwinche/typeable-pick-list/-/typeable-pick-list-1.1.0.tgz#d2146333782358c2a21647f1eaf94ae855d47e4c"
   dependencies:
     glamor "^2.20.25"
     prop-types "^15.5.10"

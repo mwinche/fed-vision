@@ -1,6 +1,6 @@
 {
   "name": "@mwinche/app-1",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Sample app",
   "main": "es/index.js",
   "author": "Matt Winchester",
@@ -14,9 +14,9 @@
     "clean": "rm -rf ./es && rm -rf ./coverage"
   },
   "dependencies": {
-    "@mwinche/chat": "^1.0.0",
-    "@mwinche/state-channels": "^1.0.0",
-    "@mwinche/typeable-pick-list": "^1.0.0",
+    "@mwinche/chat": "^1.1.0",
+    "@mwinche/state-channels": "^1.1.0",
+    "@mwinche/typeable-pick-list": "^1.1.0",
     "glamor": "^2.20.25",
     "prop-types": "^15.5.10",
     "react": "^15.6.0",
