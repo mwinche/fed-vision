@@ -2,7 +2,7 @@
   "name": "@mwinche/toggle",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "es/index.js",
   "module": "es/index.js",
   "scripts": {
     "test": "jest",

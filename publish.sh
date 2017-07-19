@@ -5,7 +5,8 @@ cd toggle
 rm -rf node_modules
 yarn
 yarn build
-yarn link
+yarn version minor
+yarn publish
 
 popd
 
@@ -16,7 +17,8 @@ cd chat
 rm -rf node_modules
 yarn
 yarn build
-yarn link
+yarn version minor
+yarn publish
 
 popd
 
@@ -27,7 +29,8 @@ cd typeable-pick-list
 rm -rf node_modules
 yarn
 yarn build
-yarn link
+yarn version minor
+yarn publish
 
 popd
 
@@ -38,7 +41,8 @@ cd state-channels
 rm -rf node_modules
 yarn
 yarn build
-yarn link
+yarn version minor
+yarn publish
 
 popd
 
@@ -47,10 +51,10 @@ pushd .
 echo app-1
 cd app-1
 rm -rf node_modules
-yarn link toggle chat typeable-pick-list state-channels
 yarn
 yarn build
-yarn link
+yarn version minor
+yarn publish
 
 popd
 
@@ -59,9 +63,12 @@ pushd .
 echo service-1
 cd service-1
 rm -rf node_modules
-yarn link app-1 toggle state-channels
 yarn
 rm -rf dist
 yarn build
 
 popd
+
+git add -A
+git commit -m "new version"
+git push --tags origin master
