@@ -11,8 +11,8 @@ popd
 
 pushd .
 
-echo widget-2
-cd widget-2
+echo chat
+cd chat
 rm -rf node_modules
 yarn
 yarn build
@@ -47,7 +47,7 @@ pushd .
 echo app-1
 cd app-1
 rm -rf node_modules
-yarn link toggle widget-2 widget-3 state-channels
+yarn link toggle chat widget-3 state-channels
 yarn
 yarn build
 yarn link
@@ -61,6 +61,7 @@ cd service-1
 rm -rf node_modules
 yarn link app-1 toggle state-channels
 yarn
-yarn link
+rm -rf dist
+yarn build
 
 popd

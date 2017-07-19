@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from 'glamor';
 
 import PickList from 'widget-3';
-import Chat from 'widget-2';
+import Chat from 'chat';
 
 const half = {
   flexGrow: 1,
