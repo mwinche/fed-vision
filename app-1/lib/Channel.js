@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'glamor';
 
-import PickList from 'widget-3';
+import PickList from 'typeable-pick-list';
 import Chat from 'chat';
 
 const half = {

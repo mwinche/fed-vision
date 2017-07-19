@@ -22,8 +22,8 @@ popd
 
 pushd .
 
-echo widget-3
-cd widget-3
+echo typeable-pick-list
+cd typeable-pick-list
 rm -rf node_modules
 yarn
 yarn build
@@ -47,7 +47,7 @@ pushd .
 echo app-1
 cd app-1
 rm -rf node_modules
-yarn link toggle chat widget-3 state-channels
+yarn link toggle chat typeable-pick-list state-channels
 yarn
 yarn build
 yarn link
