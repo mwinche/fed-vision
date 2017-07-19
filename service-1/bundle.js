@@ -1,7 +1,7 @@
-import App from 'app-1';
+import App from '@mwinche/app-1';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChannelStore from 'state-channels';
+import ChannelStore from '@mwinche/state-channels';
 
 const root = document.createElement('div');
 const delay = document.createElement('div');
@@ -18,7 +18,7 @@ ReactDOM.render(<App store={ChannelStore} />, root);
 setTimeout(
   () => import(
       /* webpackChunkName: "Toggle" */
-      'toggle'
+      '@mwinche/toggle'
     )
     .then(Toggle => {
       ReactDOM.render(<Toggle.default />, delay);
