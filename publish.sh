@@ -5,8 +5,8 @@ cd toggle
 rm -rf node_modules
 yarn
 yarn build
-yarn version --new-version minor
-yarn publish
+npm version minor
+npm publish
 
 popd
 
@@ -17,8 +17,8 @@ cd chat
 rm -rf node_modules
 yarn
 yarn build
-yarn version --new-version minor
-yarn publish
+npm version minor
+npm publish
 
 popd
 
@@ -29,8 +29,8 @@ cd typeable-pick-list
 rm -rf node_modules
 yarn
 yarn build
-yarn version --new-version minor
-yarn publish
+npm version minor
+npm publish
 
 popd
 
@@ -41,8 +41,8 @@ cd state-channels
 rm -rf node_modules
 yarn
 yarn build
-yarn version --new-version minor
-yarn publish
+npm version minor
+npm publish
 
 popd
 
@@ -53,8 +53,8 @@ cd app-1
 rm -rf node_modules
 yarn
 yarn build
-yarn version --new-version minor
-yarn publish
+npm version minor
+npm publish
 
 popd
 
