@@ -41,9 +41,9 @@ const container = {
   position: 'relative',
   fontFamily: 'monospace',
   '::after': {
-    content: `'▾'`,
+    content: `▾`,
     position: 'absolute',
-    right: 4,
+    right: 8,
     top: 4,
     transition: 'transform 200ms',
   },
@@ -56,6 +56,14 @@ const listItem = {
 const inputClass = {
   width: '100%',
   boxSizing: 'border-box',
+};
+
+const button = {
+  width: '100%',
+  boxSizing: 'border-box',
+  border: 'none',
+  background: 'transparent',
+  textAlign: 'left',
 };
 
 const isSelected = (item, selected) => selected === item;
@@ -104,7 +112,7 @@ class TypeablePickList extends Component {
     const { onSelect } = this.props;
 
     this.setState(
-      { selected },
+      { selected, open: false },
       () => onSelect(selected)
     );
   }
@@ -122,20 +130,27 @@ class TypeablePickList extends Component {
     const { selected, open } = this.state;
 
     return (<div
-      className={css(container, open && openContainer)}
-      onClick={this.toggleOpen.bind(this)}>
+      className={css(container, open && openContainer)}>
 
-      <span>#{selected}</span>
+      <button
+        className={css(button)}
+        onClick={this.toggleOpen.bind(this)}>
+        #{selected}
+      </button>
+
       <ul className={css(itemList, open && openList)}>
         {
           items.map(item => <li
             key={`item-${item}`}
-            onClick={() => this.selectItem(item)}
             className={css(
               listItem,
               isSelected(item, selected) && selectedClass
             )}>
-            {item}
+            <button
+              className={css(button)}
+              onClick={() => this.selectItem(item)}>
+              {item}
+            </button>
           </li>)
         }
         <li className={css(listItem)}>
