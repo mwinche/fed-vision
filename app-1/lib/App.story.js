@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import App from './App.js';
 
-import ChannelStore, { addChannel } from 'state-channels';
+import ChannelStore, { addChannel } from '@mwinche/state-channels';
 
 ChannelStore.dispatch(addChannel('fed'));
 ChannelStore.dispatch(addChannel('bed'));
