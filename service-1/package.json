@@ -2,7 +2,7 @@
   "name": "@mwinche/service-1",
   "version": "1.0.1",
   "dependencies": {
-    "@mwinche/app-1": "^1.2.1",
+    "@mwinche/app-1": "^1.4.1",
     "@mwinche/state-channels": "^1.1.0",
     "@mwinche/toggle": "^1.2.0",
     "babel-core": "^6.25.0",
