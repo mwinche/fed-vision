@@ -1,13 +1,14 @@
 {
   "name": "@mwinche/app-1",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Sample app",
   "main": "es/index.js",
   "author": "Matt Winchester",
   "license": "MIT",
   "module": "es/index.js",
   "files": [
-    "es", "cjs"
+    "es",
+    "cjs"
   ],
   "scripts": {
     "test": "jest",
