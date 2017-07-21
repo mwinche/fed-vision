@@ -5,12 +5,15 @@
   "main": "es/index.js",
   "module": "es/index.js",
   "files": [
-    "es"
+    "es",
+    "cjs"
   ],
   "scripts": {
     "test": "jest",
     "lint": "eslint ./lib",
-    "build": "rollup --config",
+    "build": "run-p build:*",
+    "build:es": "rollup -c ./rollup/es.config.js",
+    "build:cjs": "rollup -c ./rollup/cjs.config.js",
     "clean": "rm -rf ./es && rm -rf ./coverage"
   },
   "author": "Matt Winchester",
@@ -29,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
+    "npm-run-all": "^4.0.2",
     "rollup": "^0.43.0",
     "rollup-plugin-babel": "^2.7.1"
   }
