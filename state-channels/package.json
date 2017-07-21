@@ -1,6 +1,6 @@
 {
   "name": "@mwinche/state-channels",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "State regarding channels",
   "main": "es/index.js",
   "module": "es/index.js",
