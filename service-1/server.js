@@ -1,6 +1,6 @@
 const express = require('express');
 
-const static = require('./dist/server').default(['./app.js']);
+const static = require('./dist/server').default(['./static/app.js']);
 
 const app = express();
 
