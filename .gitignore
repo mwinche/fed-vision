@@ -6,3 +6,5 @@
 */stats.json
 */.npmrc
 */cjs
+.DS_Store
+service-1/lambda.zip

@@ -5,9 +5,10 @@ module.exports = [
   {
     entry: './client.js',
     output: {
-      path: path.resolve('./dist/client'),
+      path: path.resolve('./dist/client/static'),
       filename: 'app.js',
       chunkFilename: '[name].chunk.js',
+      publicPath: './static/'
     },
     module: {
       rules: [
@@ -19,7 +20,7 @@ module.exports = [
     },
     plugins: [
       new HTMLWebpackPlugin({
-          title: 'Code Splitting'
+          filename: '../index.html'
       })
     ],
   },
