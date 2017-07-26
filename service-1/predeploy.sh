@@ -1,4 +1,5 @@
+rm -rf dist
 yarn build -- -p
-yarn --prod
+npm install --prod
 zip -r lambda.zip ./ > /dev/null
-yarn
+npm install
