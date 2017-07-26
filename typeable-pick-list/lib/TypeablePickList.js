@@ -55,7 +55,7 @@ const button = {
 
 const toggle = {
   '::after': {
-    content: `\\25BE`,
+    content: '\\25BE',
     position: 'absolute',
     right: 8,
     top: 6,
