@@ -17,10 +17,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "glamor": "^2.20",
-    "prop-types": "^15.5",
+    "glamor": "^2.20.37",
+    "prop-types": "^15.5.10",
     "react": "^15.5",
-    "react-dom": "^15.5"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "@storybook/react": "^3.1.9",
