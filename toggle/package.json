@@ -4,6 +4,8 @@
   "description": "",
   "main": "es/index.js",
   "module": "es/index.js",
+  "author": "",
+  "license": "MIT",
   "files": [
     "es"
   ],
@@ -14,8 +16,6 @@
     "build": "rollup --config",
     "clean": "rm -rf ./es && rm -rf ./coverage"
   },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "glamor": "^2.20.37",
     "prop-types": "^15.5.10",
