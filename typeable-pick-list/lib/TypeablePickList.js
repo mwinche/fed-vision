@@ -26,12 +26,6 @@ const openList = {
   transform: 'translate(-5px, 4px)',
 };
 
-const openContainer = {
-  '::after': {
-    transform: 'rotate(180deg)',
-  },
-};
-
 const container = {
   border: `1px solid darkblue`,
   cursor: 'pointer',
@@ -39,14 +33,6 @@ const container = {
   padding: 4,
   boxSizing: 'border-box',
   position: 'relative',
-  fontFamily: 'monospace',
-  '::after': {
-    content: `▾`,
-    position: 'absolute',
-    right: 8,
-    top: 4,
-    transition: 'transform 200ms',
-  },
 };
 
 const listItem = {
@@ -64,6 +50,23 @@ const button = {
   border: 'none',
   background: 'transparent',
   textAlign: 'left',
+  fontFamily: 'monospace',
+};
+
+const toggle = {
+  '::after': {
+    content: `\\25BE`,
+    position: 'absolute',
+    right: 8,
+    top: 6,
+    transition: 'transform 200ms',
+  },
+};
+
+const openToggle = {
+  '::after': {
+    transform: 'rotate(180deg)',
+  },
 };
 
 const isSelected = (item, selected) => selected === item;
@@ -130,10 +133,10 @@ class TypeablePickList extends Component {
     const { selected, open } = this.state;
 
     return (<div
-      className={css(container, open && openContainer)}>
+      className={css(container)}>
 
       <button
-        className={css(button)}
+        className={css(button, toggle, open && openToggle)}
         onClick={this.toggleOpen.bind(this)}>
         #{selected}
       </button>
