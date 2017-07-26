@@ -1,9 +1,17 @@
-const static = require('./dist/server').default(['./static/app.js']);
+const entry = require('./webpack-assets.json').main.js;
 
-const main = (event, context, cb) => {
-  context.succeed(static());
+const static = require('./dist/server').default([ entry ]);
+
+const main = ({ requestContext }, context, cb) => {
+  console.log(requestContext);
+
+  const body = static();
+  const statusCode = 200;
+  const headers = {
+    'Content-Type': 'text/html'
+  };
+
+  context.succeed({ body, statusCode, headers });
 };
 
-module.exports = {
-  main
-};
+module.exports = { main };

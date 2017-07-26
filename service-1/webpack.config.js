@@ -1,13 +1,14 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');
 
 module.exports = [
   {
     entry: './client.js',
     output: {
       path: path.resolve('./dist/client/static'),
-      filename: 'app.js',
-      chunkFilename: '[name].chunk.js',
+      filename: 'app.[hash].js',
+      chunkFilename: '[name].[chunkhash].chunk.js',
       publicPath: './static/'
     },
     module: {
@@ -21,7 +22,8 @@ module.exports = [
     plugins: [
       new HTMLWebpackPlugin({
           filename: '../index.html'
-      })
+      }),
+      new AssetsPlugin()
     ],
   },
   {

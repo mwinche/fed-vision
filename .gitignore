@@ -8,3 +8,4 @@
 */cjs
 .DS_Store
 service-1/lambda.zip
+service-1/webpack-assets.json

@@ -1,6 +1,8 @@
 const express = require('express');
 
-const static = require('./dist/server').default(['./static/app.js']);
+const entry = require('./webpack-assets.json').main.js;
+
+const static = require('./dist/server').default([ entry ]);
 
 const app = express();
 
