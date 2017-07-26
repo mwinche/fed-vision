@@ -2,6 +2,67 @@ import React, { Component } from 'react';
 import { css, merge } from 'glamor';
 import PropTypes from 'prop-types';
 
+export default class Toggle extends Component {
+  static defaultProps = {
+    on: false,
+    disabled: false,
+    onChange: () => {},
+  };
+
+  static propTypes = {
+    disabled: PropTypes.bool,
+    on: PropTypes.bool,
+    onChange: PropTypes.func,
+  };
+
+  render() {
+    const { on } = this.state;
+    const {
+      disabled,
+      activeColor,
+      inactiveColor,
+      handleColor,
+    } = this.props;
+
+    return (<button
+      className={css(toggle, disabled && toggleDisabled)}
+      onClick={() => this.toggle()}
+      data-test-id="toggle-wrapper"
+    >
+      <div
+        className={css(wrapper,
+        !on && off,
+        disabled && wrapperDisabled)}
+      >
+        <span {...mergeBG(left, activeColor)} />
+        <span {...mergeBG(button, handleColor)} />
+        <span {...mergeBG(right, inactiveColor)} />
+      </div>
+    </button>);
+  }
+
+  constructor(props) {
+    super(props);
+
+    const { on } = props;
+
+    this.state = {
+      on: on || false,
+    };
+  }
+
+  toggle() {
+    const { disabled, onChange } = this.props;
+
+    if (!disabled) {
+      this.setState(
+        ({ on }) => ({ on: !on }),
+        onChange,
+      );
+    }
+  }
+}
+
 const mergeBG = (styles, backgroundColor) =>
   backgroundColor ?
     merge(styles, { backgroundColor }) :
@@ -63,61 +124,6 @@ const button = css({
   height: 50,
   display: 'inline-block',
 });
-
-export default class Toggle extends Component {
-  constructor(props) {
-    super(props);
-
-    const { on } = props;
-
-    this.state = {
-      on: on || false,
-    };
-  }
-
-  toggle() {
-    const { disabled, onChange } = this.props;
-
-    if (!disabled) {
-      this.setState(
-        ({ on }) => ({ on: !on }),
-        onChange,
-      );
-    }
-  }
-
-  render() {
-    const { on } = this.state;
-    const {
-      disabled,
-      activeColor,
-      inactiveColor,
-      handleColor,
-    } = this.props;
-
-    return (<button
-      className={css(toggle, disabled && toggleDisabled)}
-      onClick={() => this.toggle()}
-      data-test-id="toggle-wrapper"
-    >
-      <div
-        className={css(wrapper,
-        !on && off,
-        disabled && wrapperDisabled)}
-      >
-        <span {...mergeBG(left, activeColor)} />
-        <span {...mergeBG(button, handleColor)} />
-        <span {...mergeBG(right, inactiveColor)} />
-      </div>
-    </button>);
-  }
-}
-
-Toggle.defaultProps = {
-  on: false,
-  disabled: false,
-  onChange: () => {},
-};
 
 Toggle.propTypes = {
   disabled: PropTypes.bool,
