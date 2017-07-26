@@ -22,7 +22,7 @@
   "dependencies": {
     "@mwinche/chat": "^1.1.0",
     "@mwinche/state-channels": "^1.1.0",
-    "@mwinche/typeable-pick-list": "^1.3.2",
+    "@mwinche/typeable-pick-list": "^1.3.3",
     "glamor": "^2.20.25",
     "prop-types": "^15.5.10",
     "react": "^15.6.0",
