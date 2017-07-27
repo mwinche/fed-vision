@@ -2,7 +2,9 @@ import babel from 'rollup-plugin-babel';
 
 export default {
   entry: 'lib/index.js',
+  dest: 'es/index.js',
   external: [ 'redux' ],
+  format: 'es',
   plugins: [
     babel({
       babelrc: false,
@@ -12,7 +14,7 @@ export default {
           "es2015": { modules: false }
         }]
       ],
-      plugins: ["external-helpers"],
+      plugins: ["external-helpers", "transform-class-properties"],
     })
   ]
 };
