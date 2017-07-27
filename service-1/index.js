@@ -1,4 +1,6 @@
-const entry = require('./webpack-assets.json').main.js;
+//This file is executed in AWS Lambda
+
+const entry = require('./dist/webpack-assets.json').main.js;
 
 const static = require('./dist/server').default([ entry ]);
 

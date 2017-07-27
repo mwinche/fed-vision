@@ -1,3 +1,6 @@
+//Exports a function which can generate a string representing the static content
+//Intended for use with both express (local dev) and AWS Lambda (prod/stage)
+
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { renderStatic } from 'glamor/server';

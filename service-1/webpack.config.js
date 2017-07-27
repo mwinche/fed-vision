@@ -4,7 +4,7 @@ const AssetsPlugin = require('assets-webpack-plugin');
 
 module.exports = [
   {
-    entry: './client.js',
+    entry: './lib/client.js',
     output: {
       path: path.resolve('./dist/client/static'),
       filename: 'app.[hash].js',
@@ -23,11 +23,11 @@ module.exports = [
       new HTMLWebpackPlugin({
           filename: '../index.html'
       }),
-      new AssetsPlugin()
+      new AssetsPlugin({ filename: './dist/webpack-assets.json' })
     ],
   },
   {
-    entry: './static.js',
+    entry: './lib/server.js',
     output: {
       path: path.resolve('./dist/server'),
       filename: 'index.js',
