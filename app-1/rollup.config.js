@@ -2,7 +2,17 @@ import babel from 'rollup-plugin-babel';
 
 export default {
   entry: 'lib/index.js',
-  external: [ 'react', 'glamor', 'prop-types' ],
+  dest: 'es/index.js',
+  external: [
+    'react',
+    'glamor',
+    'prop-types',
+    'react-redux',
+    '@mwinche/state-channels',
+    '@mwinche/typeable-pick-list',
+    '@mwinche/chat'
+  ],
+  format: 'es',
   plugins: [
     babel({
       babelrc: false,
