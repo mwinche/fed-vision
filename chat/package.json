@@ -4,6 +4,11 @@
   "description": "",
   "main": "es/index.js",
   "module": "es/index.js",
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "es"
+  ],
   "scripts": {
     "test": "jest",
     "start": "start-storybook -p 8000 -c ./.storybook",
@@ -11,31 +16,25 @@
     "build": "rollup --config",
     "clean": "rm -rf ./es && rm -rf ./coverage"
   },
-  "author": "",
-  "license": "MIT",
-  "files": [
-    "es"
-  ],
   "dependencies": {
-    "glamor": "^2.20",
-    "prop-types": "^15.5",
+    "glamor": "^2.20.37",
+    "prop-types": "^15.5.10",
     "react": "^15.5",
-    "react-dom": "^15.5"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.35.3",
+    "@storybook/react": "^3.1.9",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "enzyme": "^2.8.2",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
-    "jest": "^19.0.2",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.3.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "jest": "^20.0.4",
     "react-test-renderer": "^15.5.4",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1"

@@ -8,10 +8,15 @@ describe(`<Chat />`, () => {
   let wrapper;
 
   const type = text => {
-    wrapper.instance().input.value = text;
+    wrapper
+      .find('[data-test-id="input"]')
+      .getDOMNode().value = text;
+
     wrapper
       .find('[data-test-id="input"]')
       .simulate('keyDown', { key: ENTER });
+
+    wrapper.update();
   };
 
   beforeEach(() => wrapper = mount(<Chat />));
@@ -23,32 +28,41 @@ describe(`<Chat />`, () => {
     ).toHaveLength(0);
   });
 
-  it(`should add chats on enter`, () => {
-    type('This is the first message');
+  it(`should take chats in props`, () => {
+    wrapper = mount(<Chat chats={['Hi there', 'How are you?']} />);
 
     expect(
-      wrapper.find('[data-test-id="chat"]')
-    ).toHaveLength(1);
-
-    expect(
-      wrapper.find('[data-test-id="chat"]').text()
-    ).toBe('This is the first message');
-  });
-
-  it(`should add multiple chats on enter`, () => {
-    type('This is the first message');
-    type('This is the second message');
-
-    expect(
-      wrapper.find('[data-test-id="chat"]')
+      wrapper
+        .find('[data-test-id="chat"]')
     ).toHaveLength(2);
 
     expect(
       wrapper.find('[data-test-id="chat"]').at(0).text()
-    ).toBe('This is the second message');
+    ).toBe('Hi there');
 
     expect(
       wrapper.find('[data-test-id="chat"]').at(1).text()
-    ).toBe('This is the first message');
+    ).toBe('How are you?');
+  });
+
+  it(`should fire the callback on enter`, () => {
+    let newMessage = null;
+
+    wrapper = mount(<Chat onNewMessage={msg => newMessage = msg} />);
+
+    type('This is the first message');
+
+    expect(newMessage).toBe('This is the first message');
+  });
+
+  it(`should add clear the chat on enter`, () => {
+    let newMessage = null;
+
+    wrapper = mount(<Chat onNewMessage={msg => newMessage = msg} />);
+
+    type('This is the first message');
+    type('This is the second message');
+
+    expect(newMessage).toBe('This is the second message');
   });
 });

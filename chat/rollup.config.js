@@ -14,7 +14,7 @@ export default {
           "es2015": { modules: false }
         }]
       ],
-      plugins: ["external-helpers"],
+      plugins: ["external-helpers", "transform-class-properties"],
     })
   ]
 };
